@@ -14,16 +14,22 @@ with a specific request.<br/>
 </p>
 
 <H2>Fields</H2>
+<p>x
 The dialog has the following fields:
+</p>
 
 <H3>Type</H3>
+<p>
 The type of the alert is a pull down field which allows you to select one of a prepopulated set of issue types.<br/>
 You can also enter your own text or change the text of one of the items you selected.<br/>
 If you select one of the existing types then the Description, Solution and Other Info fields
-will be populated with text associated with the item you chose. 
+will be populated with text associated with the item you chose.
+</p>
 
 <H3>Risk</H3>
+<p>
 A pull down field which allows you to specify how serious you think the risk is:
+</p>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informational</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Low</td><td></td></tr>
@@ -32,7 +38,9 @@ A pull down field which allows you to specify how serious you think the risk is:
 </table>
 
 <H3>Confidence</H3>
+<p>
 A pull down field which allows you to specify how confident you are in the validity of the finding:
+</p>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>False Positive</td><td>for potential issues that you later find are not exploitable</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Low</td><td>for unconfirmed issues</td></tr>
@@ -42,49 +50,69 @@ A pull down field which allows you to specify how confident you are in the valid
 </table>
 
 <H3>Parameter</H3>
+<p>
 A pull down field which allows you to specify which parameter the issue is associated with.<br/>
 The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name.<br />
 Array parameters (in URL query component and <code>x-www-form-urlencoded</code> request body) are identified with its index. For
 example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
 as <code>choices[0]</code> and the second as <code>choices[1]</code>.
+</p>
 
 <H3>Attack</H3>
+<p>
 The payload that was supplied to the <em>Parameter</em>. This is expected to be set only by active scan rules
 which are the ones that send payloads/attacks.
+</p>
 
 <H3>Evidence</H3>
+<p>
 The available information in the message request or response (header or body) that indicates that the issue is present.
+</p>
 
 <H3>CWE ID</H3>
-The relevant Common Weakness Enumeration (CWE) ID associated with the flagged vulnerability. This field 
+<p>
+The relevant Common Weakness Enumeration (CWE) ID associated with the flagged vulnerability. This field
 can only be an integer.
+</p>
 
 <H3>WASC ID</H3>
+<p>
 The relevant Web Application Security Consortium (WASC) ID associated with the flagged vulnerability. This field
 can only be an integer.
+</p>
 
 <H3>Description</H3>
+<p>
 A general description of the type of issue found.<br/>
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
 Note that any changes you make will be lost if you select another type.
- 
+</p>
+
 <H3>Other Info</H3>
+<p>
 Information specific to the particular issue you have found.<br/>
 This is not prepopulated.
+</p>
 
 <H3>Solution</H3>
+<p>
 Recommendations about how to fix the issue.<br/>
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
 Note that any changes you make will be lost if you select another type.
- 
+</p>
+
 <H3>Reference</H3>
+<p>
 One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
 Note that any changes you make will be lost if you select another type.
- 
+</p>
+
 <H3>Alert Tags</H3>
+<p>
 Alerts can be tagged with arbitrary keys or key=value pairs.<br/>
 You can add as many tags as you want to each alert. However,
+</p>
 <ul>
 <li>You cannot have two tags with the same key.</li>
 <li>The key must be limited to 1024 characters and the value must be limited to 4000 characters for each tag.</li>
