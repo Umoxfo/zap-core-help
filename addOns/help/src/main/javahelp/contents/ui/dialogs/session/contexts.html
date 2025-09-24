@@ -16,9 +16,12 @@ There is a set of screens for each context you define.
 </p>
 
 <H3>Top screen</H3>
+<p>
 This allows you to set the context name and description.
+</p>
 
 <H3>Include in Context</H3>
+<p>
 This allows you to manage the URLs which will be included in the context.<br/>
 URLs which dont match any of the regexs will not be included in the context.
 <br><strong>Note:</strong> The regular expressions must match the whole URL.
@@ -30,42 +33,58 @@ result in an inability to crawl or test the target. If a 'default' port is
 specified both browsers and ZAP treat it without the default port being 
 included then it doesn't match the expectation within the Context and there's 
 nothing to interact with as part of the Context.
+</p>
 
 <H3>Exclude from Context</H3>
+<p>
 This allows you to manage the URLs which will be excluded from the context.<br/>
 You only need to specify regexs for URLs that you do not want to include but which match one or more
 of the 'include' regexes.
 <br><strong>Note:</strong> The regular expressions must match the whole URL.
+</p>
 
 <H3><a name="struct">Structure</a></H3>
+<p>
 See the <a href="context-struct.html">Session Context Structure screen</a>.
+</p>
 
 <H3>Technology</H3>
+<p>
 This allows you to specify the technologies used in the context, if known.<br/>
 By default all technologies are included.<br/>
 If you exclude technologies that you know are not used then this may speed up 
 <a href="../../../start/features/ascan.html">active scanning</a> as rules specific to the excluded
 technologies can be skipped.
+</p>
 
 <H3><a name="auth">Authentication</a></H3>
+<p>
 See the <a href="context-auth.html">Session Context Authentication screen</a>.
+</p>
 
 <h3><a name="sm">Session Management</a></h3>
-This allows you to manage the way in which Session Management is being done for the Context. 
-After selecting the Session Management Method type, the options that need to be configured 
+<p>
+This allows you to manage the way in which Session Management is being done for the Context.
+After selecting the Session Management Method type, the options that need to be configured
 depend on the Session Management Method.
+</p>
 
 <h4>Cookie-Based Session Management</h4>
-No configuration is needed for this session management method. <small>Read  
+<p>
+No configuration is needed for this session management method. <small>Read
 <a href="../../../start/features/sessionManagement.html#cbsm">more</a>...</small>
+</p>
 
 <h4>HTTP Authentication Session Management</h4>
+<p>
 No configuration is needed for this session management method. <small>Read
 <a href="../../../start/features/sessionManagement.html#hasm">more</a>...</small>
+</p>
 
 <h4>Script-Based Session Management</h4>
 
-To use this session management method, you <b>first</b> need to write (and save) a <b>Session Management Script</b> 
+<p>
+To use this session management method, you <b>first</b> need to write (and save) a <b>Session Management Script</b>
 using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
 Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
 the <b>Load</b> button, loading all the requirements of the script.
@@ -75,26 +94,30 @@ in the provided examples for Session Management Scripts. Make sure that after do
 required by the Session Management script you re-load the script. Otherwise, the parameters shown in the interface might
 not be the ones used during the session management process and errors might occur. 
 <small>Read <a href="../../../start/features/sessionManagement.html#sbsm">more</a>...</small>
-
+</p>
 
 <h3><a name="users">Users</a></h3>
-This allows you to configure a set of Users that may be used for various other actions
-throughout the application.
+<p>This allows you to configure a set of Users that may be used for various other actions
+throughout the application.</p>
 <p>The credentials section of the Users depends on the Authentication Method configured
 for the Context.</p>
 
 <H2><a name="custompages">Custom Page</a></H2>
-This functionality allows you to handle situations in which the target does not return a RFC compliant or expected error response when for conditions such as 
+<p>
+This functionality allows you to handle situations in which the target does not return a RFC compliant or expected error response when for conditions such as
 404 - Not Found, 500 - Internal Server Error, etc. Often developers implement custom 404 or 500 handling but do not actually return an appropriate status code.
 Leveraging Custom Page definitions you can define URLs or response content which identify error responses regardless of the status code associated with the response.
 <small>Read <a href="../../../start/features/custompages.html">more</a>...</small>
+</p>
 
 <H2>URL regexs</H2>
+<p>
 In the <I>Include in *</I>, <I>Exclude from *</I> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, etc. you can enter regular expressions to define excluded URLs.
 While you can escape a single meta-character with a backslash, you can also use the <B>\Q...\E</B> escape sequence. All the characters between the <B>\Q</B> and the <B>\E</B> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
 This escape sequence is used in ZAP when you exclude URLs via some context menus.
 <BR>
 <B>Note:</B> If your URL contains a "\E", then you have to do the following steps when using the <B>\Q...\E</B> escape sequence:
+</p>
 <UL>
 	<LI>Open the escape sequence</LI>
 	<LI>Close the escape sequence before the "character" \E</LI>
